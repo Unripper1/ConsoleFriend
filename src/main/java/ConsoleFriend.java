@@ -1,3 +1,6 @@
+import javax.xml.transform.sax.SAXResult;
+import java.util.Scanner;
+
 public class ConsoleFriend {
     Theme theme;
 
@@ -21,5 +24,15 @@ public class ConsoleFriend {
     }
     public String info(){
         return "Сечас выбрана тема "+theme.getName()+"\nВот что вы можете у меня спросить!\n"+theme+"\nСменить тему - change\nВыйти - exit";
+    }
+    public String command(String command){
+        if(command.equals("exit")){
+            return "exit";
+        }
+        if(command.equals("change")){
+            System.out.println("Выберете тему: Космос, География, Автомобили");
+            return selectionTheme("Автомобили");
+        }
+        return "ошибка";
     }
 }

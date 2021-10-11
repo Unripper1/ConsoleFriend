@@ -1,5 +1,8 @@
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class ConsoleFriendTest {
@@ -22,5 +25,12 @@ public class ConsoleFriendTest {
                 "Сменить тему - change\n" +
                 "Выйти - exit",consoleFriend.info());
 
+    }
+    @Test
+    public void ChangeTest(){
+        ConsoleFriend consoleFriend=new ConsoleFriend();
+        consoleFriend.selectionTheme("Космос");
+        consoleFriend.command("change");
+        assertEquals("Автомобили",consoleFriend.getTheme().getName());
     }
 }
