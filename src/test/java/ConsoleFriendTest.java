@@ -5,6 +5,9 @@ import static org.junit.Assert.assertEquals;
 public class ConsoleFriendTest {
     @Test
     public void SpaceThemeChoice(){
-        assertEquals("Space",new ConsoleFriend().selectionTheme("Space"));
+        ConsoleFriend consoleFriend=new ConsoleFriend();
+        consoleFriend.selectionTheme("Space");
+        consoleFriend.getTheme();
+        assertEquals("class SpaceTheme",consoleFriend.getTheme().toString());
     }
 }
