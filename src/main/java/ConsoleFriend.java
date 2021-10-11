@@ -23,15 +23,16 @@ public class ConsoleFriend {
         return "Тема " + theme;
     }
     public String info(){
-        return "Сечас выбрана тема "+theme.getName()+"\nВот что вы можете у меня спросить!\n"+theme+"\nСменить тему - change\nВыйти - exit";
+        return "Сечас выбрана тема "+theme.getName()+"\nВот что вы можете у меня спросить!\n"+theme+"\nСменить тему - change\nВыйти - exit\nИнформация - info";
     }
     public String command(String command){
-        if(command.equals("exit")){
-            return "exit";
-        }
         if(command.contains("change")){
             String theme=command.replace("change ","");
-            return selectionTheme(theme);
+            selectionTheme(theme);
+            return info();
+        }
+        if(command.contains("info")){
+            return info();
         }
         return theme.command(Integer.parseInt(command));
     }
