@@ -1,6 +1,6 @@
 public class GeographyTheme extends Theme{
     @Override
-    public String command(String question) {
+    public String command(int question) {
         return null;
     }
 

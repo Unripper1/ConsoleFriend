@@ -20,6 +20,6 @@ public class ConsoleFriend {
         return "Тема " + theme;
     }
     public String info(){
-        return "Сечас выбрана тема "+theme.getName();
+        return "Сечас выбрана тема "+theme.getName()+"\nВот что вы можете у меня спросить!\n"+theme+"\nСменить тему - change\nВыйти - exit";
     }
 }
