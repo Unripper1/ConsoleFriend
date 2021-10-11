@@ -30,7 +30,7 @@ public class ConsoleFriendTest {
     public void ChangeTest(){
         ConsoleFriend consoleFriend=new ConsoleFriend();
         consoleFriend.selectionTheme("Космос");
-        consoleFriend.command("change");
+        consoleFriend.command("change Автомобили");
         assertEquals("Автомобили",consoleFriend.getTheme().getName());
     }
 }

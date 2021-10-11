@@ -29,9 +29,9 @@ public class ConsoleFriend {
         if(command.equals("exit")){
             return "exit";
         }
-        if(command.equals("change")){
-            System.out.println("Выберете тему: Космос, География, Автомобили");
-            return selectionTheme("Автомобили");
+        if(command.contains("change")){
+            String theme=command.replace("change ","");
+            return selectionTheme(theme);
         }
         return "ошибка";
     }
