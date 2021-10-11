@@ -9,7 +9,11 @@ public class ConsoleFriendTest {
         consoleFriend.selectionTheme("Космос");
         assertEquals("Космос",consoleFriend.getTheme().getName());
     }
-//    public void SpaceInfo(){
-//
-//    }
+    @Test
+    public void SpaceInfo(){
+        ConsoleFriend consoleFriend=new ConsoleFriend();
+        consoleFriend.selectionTheme("Космос");
+        assertEquals("Сечас выбрана тема Космос",consoleFriend.info());
+
+    }
 }
