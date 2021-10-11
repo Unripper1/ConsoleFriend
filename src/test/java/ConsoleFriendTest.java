@@ -1,8 +1,5 @@
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
 import static org.junit.Assert.assertEquals;
 
 public class ConsoleFriendTest {
@@ -33,4 +30,11 @@ public class ConsoleFriendTest {
         consoleFriend.command("change Автомобили");
         assertEquals("Автомобили",consoleFriend.getTheme().getName());
     }
+    @Test
+    public void AskTest(){
+        ConsoleFriend consoleFriend=new ConsoleFriend();
+        consoleFriend.selectionTheme("Космос");
+        assertEquals("Возраст Вселенной — около 12,6 миллиардов лет",consoleFriend.command("1"));
+    }
+
 }

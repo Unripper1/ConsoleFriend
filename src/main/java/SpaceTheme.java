@@ -1,7 +1,18 @@
 public class SpaceTheme extends Theme{
     @Override
     public String command(int questionNumber) {
-        return null;
+        switch (questionNumber){
+            case 1:
+                return  "Возраст Вселенной — около 12,6 миллиардов лет";
+            case 2:
+                return  "Метеориты";
+            case 3:
+                return  "Венера и Уран";
+            case 4:
+                return  "Хвостатая звезда";
+            default:
+                return "Неправильный номер";
+        }
     }
 
     @Override

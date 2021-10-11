@@ -33,6 +33,6 @@ public class ConsoleFriend {
             String theme=command.replace("change ","");
             return selectionTheme(theme);
         }
-        return "ошибка";
+        return theme.command(Integer.parseInt(command));
     }
 }
