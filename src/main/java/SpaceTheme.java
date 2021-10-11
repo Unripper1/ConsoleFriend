@@ -8,4 +8,8 @@ public class SpaceTheme extends Theme{
     public String toString() {
         return "";
     }
+    @Override
+    public String getName(){
+        return "Космос";
+    }
 }

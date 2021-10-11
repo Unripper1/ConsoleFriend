@@ -6,8 +6,10 @@ public class ConsoleFriendTest {
     @Test
     public void SpaceThemeChoice(){
         ConsoleFriend consoleFriend=new ConsoleFriend();
-        consoleFriend.selectionTheme("Space");
-        consoleFriend.getTheme();
-        assertEquals("class SpaceTheme",consoleFriend.getTheme().toString());
+        consoleFriend.selectionTheme("Космос");
+        assertEquals("Космос",consoleFriend.getTheme().getName());
     }
+//    public void SpaceInfo(){
+//
+//    }
 }

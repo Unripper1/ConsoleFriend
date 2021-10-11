@@ -1,5 +1,8 @@
 public class Theme {
     public String command(String question){
-        return "Select Theme!";
+        return "Выбери тему!";
+    }
+    public String getName(){
+        return "{не выбрана}";
     }
 }

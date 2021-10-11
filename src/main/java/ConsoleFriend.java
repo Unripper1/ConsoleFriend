@@ -1,23 +1,25 @@
 public class ConsoleFriend {
     Theme theme;
 
-    public Class<? extends Theme> getTheme() {
-        return theme.getClass();
+    public Theme getTheme() {
+        return theme;
     }
 
     public String selectionTheme(String theme) {
         switch (theme){
-            case("Space"):
+            case("Космос"):
                 this.theme = new SpaceTheme();
                 break;
-            case("Cars"):
+            case("Автомобили"):
                 this.theme = new CarsTheme();
                 break;
-            case("Geography"):
+            case("География"):
                 this.theme = new GeographyTheme();
                 break;
         }
-
-        return theme;
+        return "Тема " + theme;
+    }
+    public String info(){
+        return "Сечас выбрана тема "+theme;
     }
 }
