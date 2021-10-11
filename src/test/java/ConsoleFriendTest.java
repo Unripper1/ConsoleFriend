@@ -20,7 +20,8 @@ public class ConsoleFriendTest {
                 "3 - Какие планеты солнечной системы вращаются в направлении, противоположном Земле?\n" +
                 "4 - Что в переводе с греческого означает \"комета\"?\n" +
                 "Сменить тему - change\n" +
-                "Выйти - exit",consoleFriend.info());
+                "Выйти - exit\n" +
+                "Информация - info",consoleFriend.info());
 
     }
     @Test
