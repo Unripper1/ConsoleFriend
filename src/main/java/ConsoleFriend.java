@@ -23,7 +23,15 @@ public class ConsoleFriend {
         return "Тема " + theme;
     }
     public String info(){
-        return "Сечас выбрана тема "+theme.getName()+"\nВот что вы можете у меня спросить!\n"+theme+"\nСменить тему - change\nВыйти - exit\nИнформация - info";
+        try {
+            return "Сечас выбрана тема " + theme.getName() + "\nВот что вы можете у меня спросить!\n" + theme + "\nСменить тему - change\nВыйти - exit\nИнформация - info";
+        }
+        catch (Exception e){
+            System.out.println("Ошибка, введите тему еще раз");
+            Scanner sc =new Scanner(System.in);
+            selectionTheme(sc.nextLine());
+            return info();
+        }
     }
     public String command(String command){
         if(command.contains("change")){
